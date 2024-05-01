@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/web3-react-perpetual-vault/static/css/main.3529a284.css",
-    "main.js": "/web3-react-perpetual-vault/static/js/main.daf7c614.js",
+    "main.css": "/web3-react-perpetual-vault/static/css/main.5b487aa8.css",
+    "main.js": "/web3-react-perpetual-vault/static/js/main.16c8c733.js",
     "static/js/453.0cd38f24.chunk.js": "/web3-react-perpetual-vault/static/js/453.0cd38f24.chunk.js",
     "index.html": "/web3-react-perpetual-vault/index.html",
-    "main.3529a284.css.map": "/web3-react-perpetual-vault/static/css/main.3529a284.css.map",
-    "main.daf7c614.js.map": "/web3-react-perpetual-vault/static/js/main.daf7c614.js.map",
+    "main.5b487aa8.css.map": "/web3-react-perpetual-vault/static/css/main.5b487aa8.css.map",
+    "main.16c8c733.js.map": "/web3-react-perpetual-vault/static/js/main.16c8c733.js.map",
     "453.0cd38f24.chunk.js.map": "/web3-react-perpetual-vault/static/js/453.0cd38f24.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3529a284.css",
-    "static/js/main.daf7c614.js"
+    "static/css/main.5b487aa8.css",
+    "static/js/main.16c8c733.js"
   ]
 }

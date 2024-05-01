@@ -1,7 +1,8 @@
 # Web3.0 React Perpetual Vault
 
 A perpetual donation vault using liquid staking tokens
-[Check the website]! (https://ligiasell.github.io/web3-react-perpetual-vault/)
+
+[Check the website!](<[https://shiny-salmiakki-637e19.netlify.app](https://ligiasell.github.io/web3-react-perpetual-vault/)>)
 
 Technologies: HTML, CSS, Javascript, Solidity, React, Node.js.
 Used: Remix IDE, Sepolia Testnet, Metamask Digital Wallet.
