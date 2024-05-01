@@ -1,11 +1,11 @@
 import { ethers } from "ethers";
 import { useState } from "react";
-import "./App.css";
 
+import "./App.css";
 import contractABI from "./GiveForeverABI.json";
 
 const contractAddress = "0x843C1cE2d0fAEe726A33ad13520609D55612f381";
-const provider = new ethers.BrowserProvider(window.ethereum);
+const provider = new ethers.BrowserProvider(window.ethereum); // Provided by Metamask
 let signer;
 let contract;
 
