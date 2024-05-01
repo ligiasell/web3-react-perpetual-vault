@@ -12,7 +12,6 @@ let contract;
 function App() {
   const [userAmount, setUserAmount] = useState(0);
   const [donated, setDonated] = useState(0);
-  const [lidoBalance, setLidoBalance] = useState(0);
   const [connectionStatus, setConnection] = useState("Not Connected");
 
   const handleInput = (event) => {
@@ -51,8 +50,6 @@ function App() {
   const updateBalances = async () => {
     const donated = await contract.donated();
     setDonated(ethers.formatEther(donated));
-    const lidoBalance = await contract.lidoBalance();
-    setLidoBalance(ethers.formatEther(lidoBalance));
   };
 
   return (
@@ -64,10 +61,7 @@ function App() {
         <p>A perpetual vault for charity donation</p>
         <div className="App-body">
           <div className="App-balances">
-            Donated: {donated} ETH
-            <br />
-            Balance: {lidoBalance} ETH
-            <br />
+            <p>Donated: {donated} ETH</p>
           </div>
           <div className="App-button-box">
             <div className="App-connection">{connectionStatus}</div>
@@ -81,8 +75,7 @@ function App() {
               onChange={handleInput}
               value={userAmount}
             />
-            <br />
-            <button onClick={deposit} disabled={userAmount === 0}>
+            <button type="button" onClick={deposit} disabled={userAmount === 0}>
               DEPOSIT
             </button>
           </div>
