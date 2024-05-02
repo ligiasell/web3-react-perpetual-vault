@@ -1,6 +1,9 @@
 import { ethers } from "ethers";
 import { useState } from "react";
 
+import donationLogo from "./assets/donation.png";
+import imageBackground from "./assets/hands.jpg";
+
 import "./App.css";
 import contractABI from "./GiveForeverABI.json";
 
@@ -38,6 +41,7 @@ function App() {
       await tx.wait();
       updateBalances();
     } catch (error) {
+      setUserAmount(0);
       if (error.code === 4001) {
         alert("Transaction was rejected by the user.");
       } else {
@@ -50,48 +54,67 @@ function App() {
   const updateBalances = async () => {
     const donated = await contract.donated();
     setDonated(ethers.formatEther(donated));
+    setUserAmount(0);
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>
-          <span className="blue">Give</span>Forever
-        </h1>
-        <p>A perpetual vault for charity donation</p>
-        <div className="App-body">
-          <div className="App-balances">
-            <p>Donated: {donated} ETH</p>
-          </div>
-          <div className="App-button-box">
-            <div className="App-connection">{connectionStatus}</div>
-            <button onClick={connect}>CONNECT</button>
-          </div>
-          <div className="App-button-box">
-            <input
-              type="text"
-              id="deposit-amount"
-              placeholder="ETH"
-              onChange={handleInput}
-              value={userAmount}
-            />
-            <button type="button" onClick={deposit} disabled={userAmount === 0}>
-              DEPOSIT
-            </button>
-          </div>
-          <div className="App-contract">
-            Contract{" "}
-            <a
-              href={`https://etherscan.io/address/${contractAddress}`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {contractAddress}
-            </a>
+    <main className="App">
+      <div>
+        <header className="App-header">
+          <h1>
+            <span className="Text-blue">Give</span>Forever
+          </h1>
+          <h2>A perpetual vault for charity donation</h2>
+        </header>
+        <img
+          src={imageBackground}
+          alt="Two hands giving the idea of donation"
+          className="Image-background"
+        />
+      </div>
+      <section className="App-content">
+        <div className="App-balances">
+          <img src={donationLogo} alt="" className="Image-donation" />
+          <div className="App-balances-texts">
+            <p>Donated:</p>
+            <p>
+              {donated} <span className="App-balances-eth">ETH</span>
+            </p>
           </div>
         </div>
-      </header>
-    </div>
+        <div className="App-buttons-box">
+          <button type="button" onClick={connect} className="Button-secondary">
+            Connect Wallet
+          </button>
+          <p className="App-connection">{connectionStatus}</p>
+          <input
+            type="text"
+            id="deposit-amount"
+            placeholder="ETH"
+            onChange={handleInput}
+            value={userAmount}
+          />
+          <button
+            type="button"
+            onClick={deposit}
+            disabled={userAmount === 0}
+            className="Button-primary"
+          >
+            Donate
+          </button>
+        </div>
+        <div className="App-contract">
+          Contract{" "}
+          <a
+            href={`https://etherscan.io/address/${contractAddress}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {contractAddress}
+          </a>
+        </div>
+      </section>
+    </main>
   );
 }
 
