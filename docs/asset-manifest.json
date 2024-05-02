@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/web3-react-perpetual-vault/static/css/main.5b487aa8.css",
-    "main.js": "/web3-react-perpetual-vault/static/js/main.16c8c733.js",
+    "main.css": "/web3-react-perpetual-vault/static/css/main.eb2ce272.css",
+    "main.js": "/web3-react-perpetual-vault/static/js/main.cacf31c2.js",
     "static/js/453.0cd38f24.chunk.js": "/web3-react-perpetual-vault/static/js/453.0cd38f24.chunk.js",
+    "static/media/hands.jpg": "/web3-react-perpetual-vault/static/media/hands.89bb37aec7e9d045b203.jpg",
+    "static/media/donation.png": "/web3-react-perpetual-vault/static/media/donation.df2ae88e48c813e978bc.png",
     "index.html": "/web3-react-perpetual-vault/index.html",
-    "main.5b487aa8.css.map": "/web3-react-perpetual-vault/static/css/main.5b487aa8.css.map",
-    "main.16c8c733.js.map": "/web3-react-perpetual-vault/static/js/main.16c8c733.js.map",
+    "main.eb2ce272.css.map": "/web3-react-perpetual-vault/static/css/main.eb2ce272.css.map",
+    "main.cacf31c2.js.map": "/web3-react-perpetual-vault/static/js/main.cacf31c2.js.map",
     "453.0cd38f24.chunk.js.map": "/web3-react-perpetual-vault/static/js/453.0cd38f24.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5b487aa8.css",
-    "static/js/main.16c8c733.js"
+    "static/css/main.eb2ce272.css",
+    "static/js/main.cacf31c2.js"
   ]
 }
